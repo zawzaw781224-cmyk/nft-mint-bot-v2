@@ -1,5 +1,18 @@
 [
     {
+        "inputs": [],
+        "name": "mint",
+        "outputs": [
+            {
+                "internalType": "uint256",
+                "name": "",
+                "type": "uint256"
+            }
+        ],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
         "anonymous": false,
         "inputs": [
             {
@@ -23,19 +36,6 @@
         ],
         "name": "Transfer",
         "type": "event"
-    },
-    {
-        "inputs": [],
-        "name": "mint",
-        "outputs": [
-            {
-                "internalType": "uint256",
-                "name": "",
-                "type": "uint256"
-            }
-        ],
-        "stateMutability": "nonpayable",
-        "type": "function"
     },
     {
         "inputs": [],

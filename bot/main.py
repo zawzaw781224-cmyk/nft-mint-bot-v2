@@ -134,10 +134,9 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
         "🏥 /health\n"
         "   → RPC / Wallet / Gas စနစ်အခြေအနေ စစ်ရန်\n\n"
 
-        "🔎 /tx\n"
-        "   → Transaction အခြေအနေ စစ်ရန်\n\n"
+        
 
-        "🆔 /myid\n"
+        "🔎🆔 /myid\n"
         "   → ကိုယ့် Telegram ID ကြည့်ရန်"
     )
 def is_admin(update: Update) -> bool:
@@ -1697,7 +1696,7 @@ def main():
     app.add_handler(CommandHandler("status", status))
     
     app.add_handler(CommandHandler("balance",balance))
-    app.add_handler(CommandHandler("tx",tx))
+
     app.add_handler(CommandHandler("health",health))
     app.add_handler(CommandHandler("myid",myid))
     app.add_handler(CommandHandler("auto_mint",auto_mint_command))
