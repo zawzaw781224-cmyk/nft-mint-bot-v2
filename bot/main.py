@@ -731,11 +731,11 @@ async def set_contract(
         # 3. Check Robinhood Chain
         chain_id = service.w3.eth.chain_id
 
-        if chain_id != 4663:
+        if chain_id != 46630:
             await update.message.reply_text(
                 "❌ Wrong Network!\n\n"
                 f"Current Chain ID: {chain_id}\n"
-                "Expected Chain ID: 4663"
+                "Expected Chain ID: 46630"
             )
             return
 

@@ -19,7 +19,7 @@ RPC_URL = os.getenv("ARC_RPC_URL")
 WALLET_ADDRESS = os.getenv("WALLET_ADDRESS")
 PRIVATE_KEY = os.getenv("PRIVATE_KEY")
 
-CONTRACT_ADDRESS = "0x0ED82B2916c31E2EeD6Ae3E18F7257326F1f7875"
+
 
 nonce_lock = threading.Lock()
 class NFTService:
@@ -162,7 +162,7 @@ class NFTService:
 
         checks.append({
             "name": "Chain ID",
-            "ok": chain_id == 4663,
+            "ok": chain_id == 46630,
             "value": chain_id
         })
 
@@ -270,7 +270,7 @@ class NFTService:
 
         if all([
             rpc_ok,
-            chain_id == 4663,
+            chain_id == 46630,
             wallet_ok,
             contract_ok,
             abi_ok,
@@ -444,7 +444,7 @@ class NFTService:
                         "nonce": nonce,
                         "value": value,
                         "gasPrice": gas_price,
-                        "chainId": 4663,
+                        "chainId": 46630,
                     }
                 )
             )
@@ -1010,7 +1010,7 @@ class NFTService:
                     "nonce": nonce,
                     "value": value,
                     "gasPrice": gas_price,
-                    "chainId": 4663,
+                    "chainId": 46630,
                 }
             )
         )
@@ -1374,7 +1374,7 @@ class NFTService:
             # 2. Chain ID
             chain_id = self.w3.eth.chain_id
 
-            if chain_id != 4663:
+            if chain_id != 46630:
                 return {
                     "healthy": False,
                     "rpc": True,
@@ -1384,7 +1384,7 @@ class NFTService:
                     "balance": 0,
                     "error": (
                         f"Wrong network. "
-                        f"Expected 4663, got {chain_id}"
+                        f"Expected 46630, got {chain_id}"
                     )
                 }
 
@@ -1409,7 +1409,7 @@ class NFTService:
             return {
                 "healthy": (
                     connected
-                    and chain_id == 4663
+                    and chain_id == 46630
                     and wallet_ok
                     and gas_ok
                 ),
